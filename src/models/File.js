@@ -21,7 +21,7 @@ File.virtual('url').get(function() {
 
     const url = process.env.URL || 'http://localhost:3000';
 
-    return `${$url}/files/${encodeURIComponent(this.path)}`;
+    return `${url}/files/${encodeURIComponent(this.path)}`;
 })
 
 module.exports = mongoose.model("File", File);
