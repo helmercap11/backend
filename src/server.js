@@ -36,4 +36,9 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use(require('./routes'));
 
-server.listen(process.env.PORT || 3001);
+//server.listen(process.env.PORT || 3001);
+
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}.`);
+});

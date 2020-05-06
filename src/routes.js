@@ -9,7 +9,9 @@ const BoxController = require('./controllers/BoxController');
 const FileController = require('./controllers/FileController');
 
 
-
+routes.get('/', (req,res) => {
+    res.json({message: "Bem Vindo a Aplicação!"});
+})
 routes.post('/boxes', BoxController.store);
 routes.get('/boxes/:id', BoxController.show);
 routes.post(
